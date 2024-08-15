@@ -1,0 +1,11 @@
+:root {
+  --bg:red;
+}
+
+body {
+  background: var(--bg);
+  font-size: 20px;
+  padding: 20px;
+}
+
+/*# sourceMappingURL=index.css.map */

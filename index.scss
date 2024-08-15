@@ -1,0 +1,13 @@
+:root{
+    --bg:red;
+}
+
+@mixin style {
+    background: var(--bg);
+    font-size: 20px;
+    padding: 20px;
+}
+
+body{
+    @include style();
+}
