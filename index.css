@@ -1,10 +1,27 @@
-:root {
-  --bg:red;
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body {
-  background: var(--bg);
+  background: blue;
   font-size: 20px;
+  padding: 20px;
+}
+
+.div, div {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1440px;
+  background: rgba(153, 205, 50, 0.5);
   padding: 20px;
 }
 

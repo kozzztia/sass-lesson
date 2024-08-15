@@ -1,13 +1,29 @@
-:root{
-    --bg:red;
-}
+@use "reset";
+@use "variables";
 
 @mixin style {
-    background: var(--bg);
-    font-size: 20px;
-    padding: 20px;
+    background: variables.$bg;
+    font-size: variables.$size;
+    padding: variables.$size;
+}
+@mixin centred($text) {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    max-width: variables.$max-width;
+    background: $text
 }
 
 body{
     @include style();
+}
+%div{
+    @include centred(variables.$div-bg);
+    padding: variables.$size;
+}
+div{
+    @extend %div
+}
+.div{
+    @extend %div
 }
