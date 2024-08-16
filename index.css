@@ -16,6 +16,7 @@ body {
   margin: 0 auto;
   padding: 10px;
   position: relative;
+  margin-bottom: 40px;
 }
 .header__subtitle {
   font-family: "Raleway";
@@ -66,8 +67,44 @@ body {
   margin: 0 auto;
   padding: 10px;
   position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.page > * {
+  flex-basis: 50%;
 }
 
+.article__title {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+  text-transform: capitalize;
+  color: #666666;
+  position: relative;
+}
+.article__title::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 1px;
+  background: gold;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.article__sub-title {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 36px;
+  text-align: center;
+  text-transform: capitalize;
+  color: #666666;
+}
 #logo {
   fill: gold;
 }

@@ -17,6 +17,7 @@ body {
 
 .header {
     @include main-size(variables.$header-height);
+    margin-bottom: 40px;
 
     &__subtitle {
         font-family: 'Raleway';
@@ -51,7 +52,8 @@ body {
         transform: translate(-50%, -50%);
         background: #ffffff;
     }
-    &::before{
+
+    &::before {
         content: "";
         display: block;
         position: absolute;
@@ -59,12 +61,70 @@ body {
         height: 1px;
         bottom: 0;
         left: 0;
-        background:variables.$decor-color;
+        background: variables.$decor-color;
     }
 }
 
 .page {
-    @include main-size(variables.$main-height)
+    @include main-size(variables.$main-height);
+    display: flex;
+    justify-content: space-between;
+
+    &>* {
+        flex-basis: 50%;
+    }
+}
+// article
+.article {
+    &__title {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 900;
+        font-size: 36px;
+        line-height: 42px;
+        text-align: center;
+        text-transform: capitalize;
+        color: variables.$text-color;
+        position: relative;
+        &::before{
+            content: "";
+            position: absolute;
+            width: 100px;
+            height: 1px;
+            background: variables.$decor-color;
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+
+        }
+    }
+
+    &__sub-title {
+         font-family: 'Raleway';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 36px;
+        text-align: center;
+        text-transform: capitalize;
+        color: variables.$text-color;
+    }
+    &__list{
+
+    }
+}
+
+.list{
+    &__item{
+
+    }
+}
+// photo
+.photo {
+    &__svg {
+
+    }
 }
 
 
