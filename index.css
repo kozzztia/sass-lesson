@@ -206,8 +206,24 @@ body {
   height: 100%;
   transition: 0.5s;
 }
+.list__item .icon circle {
+  fill: inherit;
+  transition: 0.5s;
+}
+.list__item .icon path {
+  transition: 0.5s;
+}
 .list__item:hover .icon {
   filter: drop-shadow(0 0 5px gold);
+}
+.list__item:hover .icon circle {
+  fill: gold;
+  stroke: #666666;
+  transition: 0.5s;
+}
+.list__item:hover .icon path {
+  transition: 0.5s;
+  fill: #666666;
 }
 
 .photo {

@@ -217,10 +217,26 @@ body {
             width :100%;
             height: 100%;
             transition: variables.$transition;
+            circle{
+                fill: inherit;
+                transition: variables.$transition;
+            }
+            path{
+                transition: variables.$transition;
+            }
         }
         &:hover{
             .icon{
                 filter: drop-shadow(0 0 5px variables.$decor-color);
+                circle{
+                    fill: variables.$decor-color;
+                    stroke: variables.$text-color;
+                    transition: variables.$transition;
+                }
+                path{
+                    transition: variables.$transition;
+                    fill: variables.$text-color;
+                }
             }
         }
     }
@@ -257,13 +273,6 @@ body {
         transform: rotate(45deg);
     }
 }
-
-
-
-
-
-
-
 #logo {
     fill: variables.$decor-color;
 }
