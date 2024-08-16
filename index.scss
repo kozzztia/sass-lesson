@@ -1,29 +1,13 @@
-@use "reset";
 @use "variables";
+@use "stardanting";
 
-@mixin style {
-    background: variables.$bg;
-    font-size: variables.$size;
-    padding: variables.$size;
-}
-@mixin centred($text) {
-    display: block;
-    width: 100%;
-    margin: 0 auto;
-    max-width: variables.$max-width;
-    background: $text
-}
+
 
 body{
-    @include style();
+    font-family: Roleway;
+    overflow: auto;
 }
-%div{
-    @include centred(variables.$div-bg);
-    padding: variables.$size;
+#logo{
+    fill: variables.$decor-color;
 }
-div{
-    @extend %div
-}
-.div{
-    @extend %div
-}
+
