@@ -6,23 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300..800&family=Raleway:wght@100..900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300..800&family=Raleway:wght@100..900&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="index.css">
     <title>sass-lesson</title>
 </head>
 
 <body>
-    <header>
-
+    <header class="header">
+        <h3 class="header__subtitle">The geniuses behind our work</h3>
+        <h1 class="header__title">Our team</h1>
+        <svg class="header__logo" id="logo">
+            <use xlink:href="assets/logo.svg#logo"></use>
+        </svg>
     </header>
-    <main>
-        <figure>
-            <svg id="logo">
-                <use xlink:href="./assets/sprite.svg#logo"/>
-            </svg>
+    <main class="page">
+        <figure class="page__photo">
+            <img src="assets/photo.jpg" alt="person">
         </figure>
-        <article>
-
+        <article class="page__article">
+            <svg id="facebook">
+                <use xlink:href="assets/facebook.svg#facebook"></use>
+            </svg>
+            <svg id="google">
+                <use xlink:href="assets/google.svg#google"></use>
+            </svg>
+            <svg id="linkedin">
+                <use xlink:href="assets/linkedin.svg#linkedin"></use>
+            </svg>
+            <svg id="twitter">
+                <use xlink:href="assets/twitter.svg#twitter"></use>
+            </svg>
         </article>
     </main>
 </body>
