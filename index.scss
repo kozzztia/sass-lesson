@@ -13,6 +13,7 @@
 body {
     font-family: Roleway;
     overflow: auto;
+    background: #fff;
 }
 
 .header {
@@ -66,16 +67,37 @@ body {
 }
 
 .page {
-    @include main-size(variables.$main-height);
+    @include main-size(auto);
     display: flex;
     justify-content: space-between;
 
-    &>* {
+    &__photo-wrap {
         flex-basis: 50%;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        background: inherit;
+        overflow: hidden;
+
     }
+
+    ;
+
+    &__article {
+        flex-basis: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: inherit;
+    }
+
+    ;
 }
+
 // article
 .article {
+    border-left: solid 1px variables.$decor-color;
     &__title {
         font-family: 'Roboto';
         font-style: normal;
@@ -86,7 +108,10 @@ body {
         text-transform: capitalize;
         color: variables.$text-color;
         position: relative;
-        &::before{
+        padding: 30px variables.$padding;
+        margin-bottom: 30px;
+
+        &::before {
             content: "";
             position: absolute;
             width: 100px;
@@ -95,13 +120,11 @@ body {
             bottom: 0;
             left: 50%;
             transform: translate(-50%, -50%);
-
-
         }
     }
 
     &__sub-title {
-         font-family: 'Raleway';
+        font-family: 'Raleway';
         font-style: normal;
         font-weight: 400;
         font-size: 24px;
@@ -109,21 +132,127 @@ body {
         text-align: center;
         text-transform: capitalize;
         color: variables.$text-color;
+        margin-bottom: 30px;
     }
-    &__list{
 
+    &__list {
+        margin-bottom: 30px;
+    }
+
+    &__text {
+        position: relative;
+        font-family: 'Raleway';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 24px;
+        text-align: center;
+        color: variables.$text-color;
+        max-width: 70%;
+        padding-bottom: 20px;
+        margin-bottom: 25px;
+        &:after{
+            content: "";
+            position: absolute;
+            background: transparent;
+            width: 20px;
+            height: 5px;
+            border: 5px solid #fff;
+            bottom: -10px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        &:before{
+            content: "";
+            position: absolute;
+            width: 50px;
+            height: 4px;
+            background: variables.$decor-color;
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    &__btn {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 5px 10px;
+        max-width: 118px;
+        height: autox;
+        border: 1px solid variables.$decor-color;
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 14px;
+        text-align: center;
+        text-transform: uppercase;
+        color: variables.$text-color;
+        white-space: nowrap;
+        transition: variables.$transition;
+        cursor: pointer;
+        user-select: none;
+        &:hover{
+            background: variables.$decor-color;
+        }
     }
 }
 
-.list{
-    &__item{
+.list {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5px;
 
+    &__item {
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        .icon{
+            width :100%;
+            height: 100%;
+            transition: variables.$transition;
+        }
+        &:hover{
+            .icon{
+                filter: drop-shadow(0 0 5px variables.$decor-color);
+            }
+        }
     }
 }
+
 // photo
 .photo {
-    &__svg {
+    background: inherit;
+    padding: 15px;
+    max-width: 430px;
+    height: auto;
+    border: 1px solid variables.$decor-color;
+    position: relative;
+    z-index: auto;
 
+    img {
+        position: relative;
+        z-index: 100;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    &::before {
+        z-index: 50;
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        inset: 0;
+        background: #fff;
+        transform: rotate(45deg);
     }
 }
 

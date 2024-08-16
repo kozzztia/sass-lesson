@@ -22,37 +22,58 @@
         </svg>
     </header>
     <main class="page">
-        <figure class="page__photo">
-            <img src="assets/photo.jpg" alt="person">
-        </figure>
+        <aside class="page__photo-wrap">
+            <figure class="page__photo photo">
+                <img src="assets/photo.jpg" alt="person">
+            </figure>
+        </aside>
         <article class="page__article article">
             <h2 class="article__title">Sahariar Kabir</h2>
             <h3 class="article__sub-title">Frontend Developer</h3>
 
             <ul class="article__list list">
-                <li class="list_item"> 
-                    <svg id="facebook">
-                        <use xlink:href="assets/facebook.svg#facebook"></use>
-                    </svg>
+                <li class="list__item">
+                    <a href="#">
+                        <svg id="facebook" class="icon">
+                            <use xlink:href="assets/facebook.svg#facebook"></use>
+                        </svg>
+                    </a>
                 </li>
-                <li class="list_item">
-                    <svg id="google">
-                        <use xlink:href="assets/google.svg#google"></use>
-                    </svg>
-                <li class="list_item">
+
+                <li class="list__item">
+                    <a href="#">
+                        <svg id="google" class="icon">
+                            <use xlink:href="assets/google.svg#google"></use>
+                        </svg>
+                    </a>
                 </li>
-                <li class="list_item">
-                    <svg id="linkedin">
-                        <use xlink:href="assets/linkedin.svg#linkedin"></use>
-                    </svg>
+
+                <li class="list__item">
+                    <a href="#">
+                        <svg id="linkedin" class="icon">
+                            <use xlink:href="assets/linkedin.svg#linkedin"></use>
+                        </svg>
+                    </a>
                 </li>
-                <li class="list_item">
-                    <svg id="twitter">
-                        <use xlink:href="assets/twitter.svg#twitter"></use>
-                    </svg>
+
+                <li class="list__item">
+                    <a href="#">
+                        <svg id="twitter" class="icon">
+                            <use xlink:href="assets/twitter.svg#twitter"></use>
+                        </svg>
+                    </a>
                 </li>
             </ul>
+            <p class="article__text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis cursus dui sit amet ligula efficitur, sit
+                amet lacinia massa dictum. Etiam accumsan felis a nunc facilisis, ut euismod lacus placerat. Praesent
+                rutrum eget massa a convallis. Nam vitae augue malesuada, accumsan mauris ut, consectetur.
+            </p>
+            <button class="article__btn">
+                view profile
+            </button>
         </article>
+
     </main>
 </body>
 
